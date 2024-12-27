@@ -1,0 +1,1020 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		152791BB2D1AF30900EB60BD /* SMSFiltering.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 152791B42D1AF30900EB60BD /* SMSFiltering.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		152791CE2D1AF38D00EB60BD /* SafariContentBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 152791C52D1AF38D00EB60BD /* SafariContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1527926E2D1AF4F800EB60BD /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159ACDA22D1342200011D699 /* NetworkExtension.framework */; };
+		152792762D1AF4F800EB60BD /* NetworkExtensionContentBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1527926D2D1AF4F800EB60BD /* NetworkExtensionContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		152794822D1D72F500EB60BD /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159ACDA22D1342200011D699 /* NetworkExtension.framework */; };
+		1527948A2D1D72F500EB60BD /* NetworkExtensionLocalVPN.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 152794812D1D72F500EB60BD /* NetworkExtensionLocalVPN.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		152791B92D1AF30900EB60BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 159ACD342D13411D0011D699 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 152791B32D1AF30900EB60BD;
+			remoteInfo = SMSFiltering;
+		};
+		152791CC2D1AF38D00EB60BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 159ACD342D13411D0011D699 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 152791C42D1AF38D00EB60BD;
+			remoteInfo = SafariContentBlocker;
+		};
+		152792742D1AF4F800EB60BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 159ACD342D13411D0011D699 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1527926C2D1AF4F800EB60BD;
+			remoteInfo = NetworkExtensionContentBlocker;
+		};
+		152794882D1D72F500EB60BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 159ACD342D13411D0011D699 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 152794802D1D72F500EB60BD;
+			remoteInfo = NetworkExtensionLocalVPN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		159ACDB02D1342200011D699 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1527948A2D1D72F500EB60BD /* NetworkExtensionLocalVPN.appex in Embed Foundation Extensions */,
+				152792762D1AF4F800EB60BD /* NetworkExtensionContentBlocker.appex in Embed Foundation Extensions */,
+				152791BB2D1AF30900EB60BD /* SMSFiltering.appex in Embed Foundation Extensions */,
+				152791CE2D1AF38D00EB60BD /* SafariContentBlocker.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		152791B42D1AF30900EB60BD /* SMSFiltering.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SMSFiltering.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		152791C52D1AF38D00EB60BD /* SafariContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SafariContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1527926D2D1AF4F800EB60BD /* NetworkExtensionContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NetworkExtensionContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		152794812D1D72F500EB60BD /* NetworkExtensionLocalVPN.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NetworkExtensionLocalVPN.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		159ACD3C2D13411D0011D699 /* SecurityPoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityPoC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		159ACDA22D1342200011D699 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		152791BE2D1AF30900EB60BD /* Exceptions for "SMSFiltering" folder in "SMSFiltering" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 152791B32D1AF30900EB60BD /* SMSFiltering */;
+		};
+		152791CF2D1AF38D00EB60BD /* Exceptions for "SafariContentBlocker" folder in "SafariContentBlocker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 152791C42D1AF38D00EB60BD /* SafariContentBlocker */;
+		};
+		1527925B2D1AF42400EB60BD /* Exceptions for "SecurityPoC" folder in "SMSFiltering" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Common/Logger/Logger.swift,
+				Common/Phishing/PhishingCache.swift,
+				Common/Phishing/PhishingDomain.swift,
+				Common/Phishing/PhishingFactory.swift,
+				Common/Phishing/PhishingKeys.swift,
+				"Common/Protection Strategy/ProtectionStrategy.swift",
+			);
+			target = 152791B32D1AF30900EB60BD /* SMSFiltering */;
+		};
+		1527925C2D1AF42400EB60BD /* Exceptions for "SecurityPoC" folder in "SafariContentBlocker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Common/Logger/Logger.swift,
+				Common/Phishing/PhishingCache.swift,
+				Common/Phishing/PhishingDomain.swift,
+				Common/Phishing/PhishingFactory.swift,
+				Common/Phishing/PhishingKeys.swift,
+				"Common/Protection Strategy/ProtectionStrategy.swift",
+			);
+			target = 152791C42D1AF38D00EB60BD /* SafariContentBlocker */;
+		};
+		152792772D1AF4F800EB60BD /* Exceptions for "NetworkExtensionContentBlocker" folder in "NetworkExtensionContentBlocker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1527926C2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */;
+		};
+		152792812D1AF8DB00EB60BD /* Exceptions for "SecurityPoC" folder in "NetworkExtensionContentBlocker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Common/Logger/Logger.swift,
+				Common/Phishing/PhishingCache.swift,
+				Common/Phishing/PhishingDomain.swift,
+				Common/Phishing/PhishingFactory.swift,
+				Common/Phishing/PhishingKeys.swift,
+				"Common/Protection Strategy/ProtectionStrategy.swift",
+			);
+			target = 1527926C2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */;
+		};
+		152793C32D1C6DA000EB60BD /* Exceptions for "SafariContentBlocker" folder in "SecurityPoC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SafariCBRule.swift,
+				SafariContentBlockerStrategy.swift,
+			);
+			target = 159ACD3B2D13411D0011D699 /* SecurityPoC */;
+		};
+		152793C52D1C6DA500EB60BD /* Exceptions for "NetworkExtensionContentBlocker" folder in "SecurityPoC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NEContentBlockerStrategy.swift,
+			);
+			target = 159ACD3B2D13411D0011D699 /* SecurityPoC */;
+		};
+		1527947C2D1D690C00EB60BD /* Exceptions for "SMSFiltering" folder in "SecurityPoC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SMSFilteringStrategy.swift,
+			);
+			target = 159ACD3B2D13411D0011D699 /* SecurityPoC */;
+		};
+		1527948E2D1D72F500EB60BD /* Exceptions for "NetworkExtensionLocalVPN" folder in "NetworkExtensionLocalVPN" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 152794802D1D72F500EB60BD /* NetworkExtensionLocalVPN */;
+		};
+		152794942D1D74C700EB60BD /* Exceptions for "NetworkExtensionLocalVPN" folder in "SecurityPoC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				NELocalVPNStrategy.swift,
+			);
+			target = 159ACD3B2D13411D0011D699 /* SecurityPoC */;
+		};
+		152794962D1D74DB00EB60BD /* Exceptions for "SecurityPoC" folder in "NetworkExtensionLocalVPN" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Common/Logger/Logger.swift,
+				"Common/Protection Strategy/ProtectionStrategy.swift",
+			);
+			target = 152794802D1D72F500EB60BD /* NetworkExtensionLocalVPN */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		152791B52D1AF30900EB60BD /* SMSFiltering */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1527947C2D1D690C00EB60BD /* Exceptions for "SMSFiltering" folder in "SecurityPoC" target */,
+				152791BE2D1AF30900EB60BD /* Exceptions for "SMSFiltering" folder in "SMSFiltering" target */,
+			);
+			path = SMSFiltering;
+			sourceTree = "<group>";
+		};
+		152791C62D1AF38D00EB60BD /* SafariContentBlocker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				152793C32D1C6DA000EB60BD /* Exceptions for "SafariContentBlocker" folder in "SecurityPoC" target */,
+				152791CF2D1AF38D00EB60BD /* Exceptions for "SafariContentBlocker" folder in "SafariContentBlocker" target */,
+			);
+			path = SafariContentBlocker;
+			sourceTree = "<group>";
+		};
+		1527926F2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				152793C52D1C6DA500EB60BD /* Exceptions for "NetworkExtensionContentBlocker" folder in "SecurityPoC" target */,
+				152792772D1AF4F800EB60BD /* Exceptions for "NetworkExtensionContentBlocker" folder in "NetworkExtensionContentBlocker" target */,
+			);
+			path = NetworkExtensionContentBlocker;
+			sourceTree = "<group>";
+		};
+		152794832D1D72F500EB60BD /* NetworkExtensionLocalVPN */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				152794942D1D74C700EB60BD /* Exceptions for "NetworkExtensionLocalVPN" folder in "SecurityPoC" target */,
+				1527948E2D1D72F500EB60BD /* Exceptions for "NetworkExtensionLocalVPN" folder in "NetworkExtensionLocalVPN" target */,
+			);
+			path = NetworkExtensionLocalVPN;
+			sourceTree = "<group>";
+		};
+		159ACD3E2D13411D0011D699 /* SecurityPoC */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1527925B2D1AF42400EB60BD /* Exceptions for "SecurityPoC" folder in "SMSFiltering" target */,
+				1527925C2D1AF42400EB60BD /* Exceptions for "SecurityPoC" folder in "SafariContentBlocker" target */,
+				152792812D1AF8DB00EB60BD /* Exceptions for "SecurityPoC" folder in "NetworkExtensionContentBlocker" target */,
+				152794962D1D74DB00EB60BD /* Exceptions for "SecurityPoC" folder in "NetworkExtensionLocalVPN" target */,
+			);
+			path = SecurityPoC;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		152791B12D1AF30900EB60BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152791C22D1AF38D00EB60BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1527926A2D1AF4F800EB60BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1527926E2D1AF4F800EB60BD /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1527947E2D1D72F500EB60BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152794822D1D72F500EB60BD /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		159ACD392D13411D0011D699 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		159ACD332D13411D0011D699 = {
+			isa = PBXGroup;
+			children = (
+				159ACD3E2D13411D0011D699 /* SecurityPoC */,
+				152791B52D1AF30900EB60BD /* SMSFiltering */,
+				152791C62D1AF38D00EB60BD /* SafariContentBlocker */,
+				1527926F2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */,
+				152794832D1D72F500EB60BD /* NetworkExtensionLocalVPN */,
+				159ACDA12D1342200011D699 /* Frameworks */,
+				159ACD3D2D13411D0011D699 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		159ACD3D2D13411D0011D699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				159ACD3C2D13411D0011D699 /* SecurityPoC.app */,
+				152791B42D1AF30900EB60BD /* SMSFiltering.appex */,
+				152791C52D1AF38D00EB60BD /* SafariContentBlocker.appex */,
+				1527926D2D1AF4F800EB60BD /* NetworkExtensionContentBlocker.appex */,
+				152794812D1D72F500EB60BD /* NetworkExtensionLocalVPN.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		159ACDA12D1342200011D699 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				159ACDA22D1342200011D699 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		152791B32D1AF30900EB60BD /* SMSFiltering */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 152791BF2D1AF30900EB60BD /* Build configuration list for PBXNativeTarget "SMSFiltering" */;
+			buildPhases = (
+				152791B02D1AF30900EB60BD /* Sources */,
+				152791B12D1AF30900EB60BD /* Frameworks */,
+				152791B22D1AF30900EB60BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				152791B52D1AF30900EB60BD /* SMSFiltering */,
+			);
+			name = SMSFiltering;
+			packageProductDependencies = (
+			);
+			productName = SMSFiltering;
+			productReference = 152791B42D1AF30900EB60BD /* SMSFiltering.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		152791C42D1AF38D00EB60BD /* SafariContentBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 152791D02D1AF38D00EB60BD /* Build configuration list for PBXNativeTarget "SafariContentBlocker" */;
+			buildPhases = (
+				152791C12D1AF38D00EB60BD /* Sources */,
+				152791C22D1AF38D00EB60BD /* Frameworks */,
+				152791C32D1AF38D00EB60BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				152791C62D1AF38D00EB60BD /* SafariContentBlocker */,
+			);
+			name = SafariContentBlocker;
+			packageProductDependencies = (
+			);
+			productName = SafariContentBlocker;
+			productReference = 152791C52D1AF38D00EB60BD /* SafariContentBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1527926C2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 152792782D1AF4F800EB60BD /* Build configuration list for PBXNativeTarget "NetworkExtensionContentBlocker" */;
+			buildPhases = (
+				152792692D1AF4F800EB60BD /* Sources */,
+				1527926A2D1AF4F800EB60BD /* Frameworks */,
+				1527926B2D1AF4F800EB60BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1527926F2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */,
+			);
+			name = NetworkExtensionContentBlocker;
+			packageProductDependencies = (
+			);
+			productName = NetworkExtensionContentBlocker;
+			productReference = 1527926D2D1AF4F800EB60BD /* NetworkExtensionContentBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		152794802D1D72F500EB60BD /* NetworkExtensionLocalVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1527948B2D1D72F500EB60BD /* Build configuration list for PBXNativeTarget "NetworkExtensionLocalVPN" */;
+			buildPhases = (
+				1527947D2D1D72F500EB60BD /* Sources */,
+				1527947E2D1D72F500EB60BD /* Frameworks */,
+				1527947F2D1D72F500EB60BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				152794832D1D72F500EB60BD /* NetworkExtensionLocalVPN */,
+			);
+			name = NetworkExtensionLocalVPN;
+			packageProductDependencies = (
+			);
+			productName = NetworkExtensionLocalVPN;
+			productReference = 152794812D1D72F500EB60BD /* NetworkExtensionLocalVPN.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		159ACD3B2D13411D0011D699 /* SecurityPoC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 159ACD4A2D13411E0011D699 /* Build configuration list for PBXNativeTarget "SecurityPoC" */;
+			buildPhases = (
+				159ACD382D13411D0011D699 /* Sources */,
+				159ACD392D13411D0011D699 /* Frameworks */,
+				159ACD3A2D13411D0011D699 /* Resources */,
+				159ACDB02D1342200011D699 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				152791BA2D1AF30900EB60BD /* PBXTargetDependency */,
+				152791CD2D1AF38D00EB60BD /* PBXTargetDependency */,
+				152792752D1AF4F800EB60BD /* PBXTargetDependency */,
+				152794892D1D72F500EB60BD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				159ACD3E2D13411D0011D699 /* SecurityPoC */,
+			);
+			name = SecurityPoC;
+			packageProductDependencies = (
+			);
+			productName = SecurityPoC;
+			productReference = 159ACD3C2D13411D0011D699 /* SecurityPoC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		159ACD342D13411D0011D699 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					152791B32D1AF30900EB60BD = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					152791C42D1AF38D00EB60BD = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					1527926C2D1AF4F800EB60BD = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					152794802D1D72F500EB60BD = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					159ACD3B2D13411D0011D699 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 159ACD372D13411D0011D699 /* Build configuration list for PBXProject "SecurityPoC" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 159ACD332D13411D0011D699;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 159ACD3D2D13411D0011D699 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				159ACD3B2D13411D0011D699 /* SecurityPoC */,
+				152791B32D1AF30900EB60BD /* SMSFiltering */,
+				152791C42D1AF38D00EB60BD /* SafariContentBlocker */,
+				1527926C2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */,
+				152794802D1D72F500EB60BD /* NetworkExtensionLocalVPN */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		152791B22D1AF30900EB60BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152791C32D1AF38D00EB60BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1527926B2D1AF4F800EB60BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1527947F2D1D72F500EB60BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		159ACD3A2D13411D0011D699 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		152791B02D1AF30900EB60BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152791C12D1AF38D00EB60BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		152792692D1AF4F800EB60BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1527947D2D1D72F500EB60BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		159ACD382D13411D0011D699 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		152791BA2D1AF30900EB60BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 152791B32D1AF30900EB60BD /* SMSFiltering */;
+			targetProxy = 152791B92D1AF30900EB60BD /* PBXContainerItemProxy */;
+		};
+		152791CD2D1AF38D00EB60BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 152791C42D1AF38D00EB60BD /* SafariContentBlocker */;
+			targetProxy = 152791CC2D1AF38D00EB60BD /* PBXContainerItemProxy */;
+		};
+		152792752D1AF4F800EB60BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1527926C2D1AF4F800EB60BD /* NetworkExtensionContentBlocker */;
+			targetProxy = 152792742D1AF4F800EB60BD /* PBXContainerItemProxy */;
+		};
+		152794892D1D72F500EB60BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 152794802D1D72F500EB60BD /* NetworkExtensionLocalVPN */;
+			targetProxy = 152794882D1D72F500EB60BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		152791BC2D1AF30900EB60BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SMSFiltering/SMSFiltering.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SMSFiltering/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SMSFiltering;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.SMSFiltering;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		152791BD2D1AF30900EB60BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SMSFiltering/SMSFiltering.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SMSFiltering/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SMSFiltering;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.SMSFiltering;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		152791D12D1AF38D00EB60BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = SafariContentBlocker/SafariContentBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafariContentBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SafariContentBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.SafariContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		152791D22D1AF38D00EB60BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = SafariContentBlocker/SafariContentBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SafariContentBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SafariContentBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.SafariContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		152792792D1AF4F800EB60BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetworkExtensionContentBlocker/NetworkExtensionContentBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NetworkExtensionContentBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkExtensionContentBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.NetworkExtensionContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1527927A2D1AF4F800EB60BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetworkExtensionContentBlocker/NetworkExtensionContentBlocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NetworkExtensionContentBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkExtensionContentBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.NetworkExtensionContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1527948C2D1D72F500EB60BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetworkExtensionLocalVPN/NetworkExtensionLocalVPN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NetworkExtensionLocalVPN/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkExtensionLocalVPN;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.NetworkExtensionLocalVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1527948D2D1D72F500EB60BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NetworkExtensionLocalVPN/NetworkExtensionLocalVPN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NetworkExtensionLocalVPN/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NetworkExtensionLocalVPN;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC.NetworkExtensionLocalVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		159ACD482D13411E0011D699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		159ACD492D13411E0011D699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		159ACD4B2D13411E0011D699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SecurityPoC/SecurityPoC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SecurityPoC/Preview Content\"";
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		159ACD4C2D13411E0011D699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SecurityPoC/SecurityPoC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SecurityPoC/Preview Content\"";
+				DEVELOPMENT_TEAM = 8EKZLH8YNG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grouplogic.securityPoC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		152791BF2D1AF30900EB60BD /* Build configuration list for PBXNativeTarget "SMSFiltering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152791BC2D1AF30900EB60BD /* Debug */,
+				152791BD2D1AF30900EB60BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		152791D02D1AF38D00EB60BD /* Build configuration list for PBXNativeTarget "SafariContentBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152791D12D1AF38D00EB60BD /* Debug */,
+				152791D22D1AF38D00EB60BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		152792782D1AF4F800EB60BD /* Build configuration list for PBXNativeTarget "NetworkExtensionContentBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152792792D1AF4F800EB60BD /* Debug */,
+				1527927A2D1AF4F800EB60BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1527948B2D1D72F500EB60BD /* Build configuration list for PBXNativeTarget "NetworkExtensionLocalVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1527948C2D1D72F500EB60BD /* Debug */,
+				1527948D2D1D72F500EB60BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		159ACD372D13411D0011D699 /* Build configuration list for PBXProject "SecurityPoC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				159ACD482D13411E0011D699 /* Debug */,
+				159ACD492D13411E0011D699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		159ACD4A2D13411E0011D699 /* Build configuration list for PBXNativeTarget "SecurityPoC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				159ACD4B2D13411E0011D699 /* Debug */,
+				159ACD4C2D13411E0011D699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 159ACD342D13411D0011D699 /* Project object */;
+}
