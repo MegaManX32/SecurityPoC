@@ -19,6 +19,10 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
         // Assign a virtual network interface IP address
         tunnelSettings.ipv4Settings = NEIPv4Settings(addresses: ["192.168.1.1"], subnetMasks: ["255.255.255.0"])
         tunnelSettings.ipv4Settings?.includedRoutes = [NEIPv4Route.default()]
+        tunnelSettings.ipv4Settings?.excludedRoutes = [
+            NEIPv4Route(destinationAddress: "8.8.8.8", subnetMask: "255.255.255.255"),
+            NEIPv4Route(destinationAddress: "1.1.1.1", subnetMask: "255.255.255.255"),
+        ]
         
         // Set DNS servers
         tunnelSettings.dnsSettings = NEDNSSettings(servers: ["8.8.8.8", "1.1.1.1"])
@@ -35,6 +39,17 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
             
             while isReadingPackets {
                 let (packets, protocols) = await packetFlow.readPackets()
+                for (packet, protocolNumber) in zip(packets, protocols) {
+//                    if let destinationAddress = self.extractDestinationIPAddress(from: packet, protocolNumber: protocolNumber.int32Value) {
+//                        Logger.shared.log(message: "Destination Address: \(destinationAddress)")
+//                    }
+                    if let sni = extractSNI(from: packet) {
+                        Logger.shared.log(message: "Found SNI: \(sni)")
+                    } else {
+                        Logger.shared.log(message: "No SNI in this packet")
+                    }
+                }
+                
                 packetFlow.writePackets(packets, withProtocols: protocols)
             }
         }
@@ -42,6 +57,81 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
     
     override func stopTunnel(with reason: NEProviderStopReason) async {
         isReadingPackets = false
+    }
+}
+
+// MARK: - Packet Inspection
+
+extension PacketTunnelProvider {
+    
+    func extractSNI(from packet: Data) -> String? {
+        // Ensure the packet contains sufficient data for TLS handshake
+        guard packet.count > 43 else { return nil }
+        
+        // Check for TLS handshake (first byte should be 0x16)
+        if packet[0] == 0x16 {
+            let handshakeType = packet[5] // Byte 6 indicates handshake type
+            if handshakeType == 0x01 { // ClientHello
+                // Parse SNI (simplified example, parsing complex TLS is non-trivial)
+                // Look for "server_name" extension (type 0x00)
+                if let range = packet.range(of: Data([0x00, 0x00])) {
+                    let lengthIndex = range.upperBound
+                    if lengthIndex + 2 < packet.count {
+                        let nameLength = Int(packet[lengthIndex]) << 8 | Int(packet[lengthIndex + 1])
+                        let nameStart = lengthIndex + 2
+                        if nameStart + nameLength <= packet.count {
+                            return String(data: packet.subdata(in: nameStart..<nameStart + nameLength), encoding: .utf8)
+                        }
+                    }
+                }
+            }
+        }
+        return nil
+    }
+    
+    private func extractDestinationIPAddress(from packet: Data, protocolNumber: Int32) -> String? {
+        if protocolNumber == AF_INET { // IPv4
+            guard packet.count >= 20 else { return nil }
+            let destinationIP = packet.subdata(in: 16..<20)
+            let address = destinationIP.map { String($0) }.joined(separator: ".")
+            if let port = extractDestinationPort(from: packet, protocolNumber: protocolNumber) {
+                return "\(address):\(port)"
+            }
+            return address
+        } else if protocolNumber == AF_INET6 { // IPv6
+            if let address = extractIPv6DestinationAddress(from: packet) {
+                if let port = extractDestinationPort(from: packet, protocolNumber: protocolNumber) {
+                    return "[\(address)]:\(port)"
+                }
+                return address
+            }
+        }
+        return nil
+    }
+    
+    private func extractIPv6DestinationAddress(from packet: Data) -> String? {
+        guard packet.count >= 40 else { return nil } // Minimum size of an IPv6 header
+
+        let destinationIP = packet.subdata(in: 24..<40) // Bytes 24–39
+        let segments = stride(from: 0, to: destinationIP.count, by: 2).map {
+            String(format: "%02x%02x", destinationIP[$0], destinationIP[$0 + 1])
+        }
+        return segments.joined(separator: ":")
+    }
+    
+    private func extractDestinationPort(from packet: Data, protocolNumber: Int32) -> Int? {
+        let ipHeaderLength: Int
+        if protocolNumber == AF_INET {
+            ipHeaderLength = 20 // IPv4 header length
+        } else if protocolNumber == AF_INET6 {
+            ipHeaderLength = 40 // IPv6 header length
+        } else {
+            return nil
+        }
+        
+        guard packet.count >= ipHeaderLength + 4 else { return nil } // Ensure there's enough data
+        let portBytes = packet.subdata(in: ipHeaderLength + 2..<ipHeaderLength + 4)
+        return Int(portBytes.withUnsafeBytes { $0.load(as: UInt16.self).bigEndian })
     }
 }
 
