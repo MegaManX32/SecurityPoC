@@ -40,13 +40,8 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
             while isReadingPackets {
                 let (packets, protocols) = await packetFlow.readPackets()
                 for (packet, protocolNumber) in zip(packets, protocols) {
-//                    if let destinationAddress = self.extractDestinationIPAddress(from: packet, protocolNumber: protocolNumber.int32Value) {
-//                        Logger.shared.log(message: "Destination Address: \(destinationAddress)")
-//                    }
-                    if let sni = extractSNI(from: packet) {
-                        Logger.shared.log(message: "Found SNI: \(sni)")
-                    } else {
-                        Logger.shared.log(message: "No SNI in this packet")
+                    if let destinationAddress = extractDestinationIPAddress(from: packet, protocolNumber: protocolNumber.int32Value) {
+                        Logger.shared.log(message: "Destination Address: \(destinationAddress)")
                     }
                 }
                 
@@ -60,35 +55,9 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
     }
 }
 
-// MARK: - Packet Inspection
+// MARK: - IP Extraction
 
 extension PacketTunnelProvider {
-    
-    func extractSNI(from packet: Data) -> String? {
-        // Ensure the packet contains sufficient data for TLS handshake
-        guard packet.count > 43 else { return nil }
-        
-        // Check for TLS handshake (first byte should be 0x16)
-        if packet[0] == 0x16 {
-            let handshakeType = packet[5] // Byte 6 indicates handshake type
-            if handshakeType == 0x01 { // ClientHello
-                // Parse SNI (simplified example, parsing complex TLS is non-trivial)
-                // Look for "server_name" extension (type 0x00)
-                if let range = packet.range(of: Data([0x00, 0x00])) {
-                    let lengthIndex = range.upperBound
-                    if lengthIndex + 2 < packet.count {
-                        let nameLength = Int(packet[lengthIndex]) << 8 | Int(packet[lengthIndex + 1])
-                        let nameStart = lengthIndex + 2
-                        if nameStart + nameLength <= packet.count {
-                            return String(data: packet.subdata(in: nameStart..<nameStart + nameLength), encoding: .utf8)
-                        }
-                    }
-                }
-            }
-        }
-        return nil
-    }
-    
     private func extractDestinationIPAddress(from packet: Data, protocolNumber: Int32) -> String? {
         if protocolNumber == AF_INET { // IPv4
             guard packet.count >= 20 else { return nil }
@@ -129,9 +98,34 @@ extension PacketTunnelProvider {
             return nil
         }
         
-        guard packet.count >= ipHeaderLength + 4 else { return nil } // Ensure there's enough data
+        guard packet.count >= ipHeaderLength + 4 else { return nil }
         let portBytes = packet.subdata(in: ipHeaderLength + 2..<ipHeaderLength + 4)
         return Int(portBytes.withUnsafeBytes { $0.load(as: UInt16.self).bigEndian })
+    }
+}
+
+// MARK: - SNI extraction (In Development)
+
+extension PacketTunnelProvider {
+    func extractSNI(from packet: Data) -> String? {
+        guard packet.count > 43 else { return nil }
+        
+        if packet[0] == 0x16 {
+            let handshakeType = packet[5]
+            if handshakeType == 0x01 {
+                if let range = packet.range(of: Data([0x00, 0x00])) {
+                    let lengthIndex = range.upperBound
+                    if lengthIndex + 2 < packet.count {
+                        let nameLength = Int(packet[lengthIndex]) << 8 | Int(packet[lengthIndex + 1])
+                        let nameStart = lengthIndex + 2
+                        if nameStart + nameLength <= packet.count {
+                            return String(data: packet.subdata(in: nameStart..<nameStart + nameLength), encoding: .utf8)
+                        }
+                    }
+                }
+            }
+        }
+        return nil
     }
 }
 
