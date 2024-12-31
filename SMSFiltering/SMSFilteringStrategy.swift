@@ -11,7 +11,11 @@ final class SMSFilteringStrategy: ProtectionStrategy {
         "SMS Filtering"
     }
     
-    func start() {}
+    func start() {
+        // TODO:
+    }
     
-    func stop() {}
+    func stop() {
+        // TODO:
+    }
 }
