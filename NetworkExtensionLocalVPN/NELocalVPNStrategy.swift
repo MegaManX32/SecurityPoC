@@ -8,6 +8,11 @@
 import NetworkExtension
 
 final class NELocalVPNStrategy: ProtectionStrategy {
+    
+    private enum NELocalVPNStrategyError: String, Error {
+        case noExistingVPNConfiguration
+    }
+    
     private var vpnManager: NETunnelProviderManager!
     private let bundleId = "com.grouplogic.securityPoC.NetworkExtensionLocalVPN"
     
@@ -42,29 +47,19 @@ final class NELocalVPNStrategy: ProtectionStrategy {
         vpnManager.protocolConfiguration = tunnelProtocol
         vpnManager.isEnabled = true
         
+        Logger.shared.log(message: "Attempt save to preferances")
         try await vpnManager.saveToPreferences()
-        return vpnManager
+        Logger.shared.log(message: "Saved to preferances")
+        throw NELocalVPNStrategyError.noExistingVPNConfiguration
     }
     
-    func start() {
-        Task {
-            do {
-                try await vpnManager().connection.startVPNTunnel()
-                Logger.shared.log(message: "VPN tunnel started successfully")
-            } catch {
-                Logger.shared.log(message: error.localizedDescription, level: .error)
-            }
-        }
+    func start() async throws {
+        try await vpnManager().connection.startVPNTunnel()
+        Logger.shared.log(message: "VPN tunnel started successfully")
     }
     
-    func stop() {
-        Task {
-            do {
-                try await vpnManager().connection.stopVPNTunnel()
-                Logger.shared.log(message: "VPN tunnel stopped successfully")
-            } catch {
-                Logger.shared.log(message: error.localizedDescription, level: .error)
-            }
-        }
+    func stop() async throws {
+        try await vpnManager().connection.stopVPNTunnel()
+        Logger.shared.log(message: "VPN tunnel stopped successfully")
     }
 }

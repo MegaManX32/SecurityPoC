@@ -20,30 +20,18 @@ final class SafariContentBlockerStrategy: ProtectionStrategy {
         "Safari Content Blocker"
     }
     
-    func start() {
-        Task {
-            do {
-                let rules = PhishingCacheFactory.shared.phishingCache().blockedDomains.map { SafariCBRule(domain: $0) }
-                try await updateSFContentBlockerManager(with: rules)
-                Logger.shared.log(message: "Safari Content Blocker Enabled")
-            } catch {
-                Logger.shared.log(message: error.localizedDescription, level: .error)
-            }
-        }
+    func start() async throws {
+        let rules = PhishingCacheFactory.shared.phishingCache().blockedDomains.map { SafariCBRule(domain: $0) }
+        try await updateSFContentBlockerManager(with: rules)
+        Logger.shared.log(message: "Safari Content Blocker Enabled")
     }
     
-    func stop() {
-        Task {
-            do {
-                let rules = SafariCBRule.emptySet
-                try await updateSFContentBlockerManager(with: rules)
-                Logger.shared.log(message: "Safari Content Blocker Disabled")
-            } catch {
-                Logger.shared.log(message: error.localizedDescription, level: .error)
-            }
-        }
+    func stop() async throws {
+        let rules = SafariCBRule.emptySet
+        try await updateSFContentBlockerManager(with: rules)
+        Logger.shared.log(message: "Safari Content Blocker Disabled")
     }
-    
+
     private func updateSFContentBlockerManager(with rules: [SafariCBRule]) async throws {
         let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: PhishingKeys.suiteName)
         guard let container else { throw SafariContentBlockerError.sharedContainerNotFound }

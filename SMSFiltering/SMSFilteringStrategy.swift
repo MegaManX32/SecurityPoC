@@ -11,11 +11,11 @@ final class SMSFilteringStrategy: ProtectionStrategy {
         "SMS Filtering"
     }
     
-    func start() {
+    func start() async throws {
         // TODO:
     }
     
-    func stop() {
+    func stop() async throws {
         // TODO:
     }
 }

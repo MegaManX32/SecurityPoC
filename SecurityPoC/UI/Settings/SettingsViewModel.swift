@@ -34,10 +34,19 @@ final class SettingsItemViewModel: ObservableObject {
         $isOn
             .dropFirst()
             .sink { value in
-                if value {
-                    strategy.start()
-                } else {
-                    strategy.stop()
+                Task {
+                    do {
+                        if value {
+                            try await strategy.start()
+                        } else {
+                            try await strategy.stop()
+                        }
+                    } catch {
+                        await MainActor.run { [weak self] in
+                            self?.isOn = !value
+                            Logger.shared.log(message: error.localizedDescription, level: .error)
+                        }
+                    }
                 }
             }
             .store(in: &subscriptions)

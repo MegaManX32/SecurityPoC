@@ -7,6 +7,6 @@
 
 protocol ProtectionStrategy {
     var name: String { get }
-    func start()
-    func stop()
+    func start() async throws
+    func stop() async throws
 }
